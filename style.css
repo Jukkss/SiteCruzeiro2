@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Cabeçalho */
+header {
+    background-color: #10002e;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ContainerHeader{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.LogoCruz {
+    display: flex;
+    flex-direction: row;
+    width: 80px; 
+    height: 80px; 
+    object-fit: contain;
+}
+.TitHeader{
+    display: flex;
+    object-fit: contain;
+    font-family: ''
+}
+
+
+/* Navegação Menu */
+.navMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.menu li {
+    margin: 0 10px;
+}
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+#menu-toggle {
+    display: none;
+}  
+
+
+/* Barra de pesquisa */
+.BarraPesq input[type="text"] {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Área Principal */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    height: 150vh;
+    padding: 20px;
+}
+.conteudo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    max-height: auto;
+    padding: 20px;
+    background-color: #10002e;
+}
+.boxVid{
+    grid-column: 1 / -1;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 50%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.VidW {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; 
+    padding: 20px;
+}
+.boxMain{
+    display: grid;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-height: 100%;
+    max-width: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+.boxMain h{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+.boxMain p{
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+.Pdt{
+    padding-bottom: auto;
+    padding-top: auto;
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.boxMainPdt{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+    margin: auto; 
+    border: 3px solid #10002e;
+    border-radius: 10px;
+    background-color:#10002e; 
+}
+
+/* Aside */
+aside {
+    flex: 1;
+    max-height: auto;
+    padding: 20px;
+    background-color:#10002e;
+}
+.boxAside{
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; 
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.LogoCruz2 {
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #10002e;
+    display: block;
+    max-width: 100%; 
+    max-height: 100%; 
+    width: 120px; 
+    height: 120px; 
+    object-fit: contain; 
+    margin: 0 auto; 
+}
+.box h3 {
+    margin-top: auto;
+    color: #333;
+    font-family: '';
+    text-align: center;
+}
+.box p {
+    color: #666;
+    line-height: 1.6;
+}
+.ContainerInsta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0e0025;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #10002e;
+      position: absolute;
+      top: 100px;
+      right: 0px;
+      width: 150px;
+      z-index: 1;
+      padding: 10px;
+      border-radius: 15%;
+    }
+    #menu-toggle:checked + .menu-icon + .menu {
+      display: flex;
+    }
+    .menu li {
+      margin: 0;
+      padding: 10px;
+      border-bottom: 1px solid 10002e;
+    }
+    .menu li a {
+      padding: 10px;
+      color: 10002e;
+      text-align: center;
+    }
+    .menu-icon {
+      display: block;
+    }
+    .main-container {
+      flex-direction: column;
+    }
+    .boxAside {
+      order: 1;
+    }
+    .Busca {
+        display: block;
+      }
+      .BarraPesq {
+        padding-left: 20px;
+        width: 100%;
+        margin: 10px 0;
+      }
+      .BarraPesq input {
+        width: calc(100% - 60px);
+      }
+      .BarraPesq button {
+        width: 50px;
+
+    }
+    footer {
+        display: none;
+    }
+}
